@@ -4,7 +4,7 @@ const _defaultLookup = 'time.google.com';
 
 class NTP {
   /// Return NTP delay in milliseconds
-  static Future<int> getNtpOffset({
+  Future<int> getNtpOffset({
     String lookUpAddress = _defaultLookup,
     int port = 123,
     DateTime? localTime,
@@ -66,7 +66,7 @@ class NTP {
   }
 
   /// Get current NTP time
-  static Future<DateTime> now({
+  Future<DateTime> now({
     String lookUpAddress = _defaultLookup,
     int port = 123,
     Duration? timeout,
